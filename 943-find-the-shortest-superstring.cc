@@ -21,11 +21,11 @@ public:
             }
         }
         
-        // Initializtion dp;
         // dp[mask][i]: the minimum cost to visit nodes in mask(those bits are set to 1) and ends at node i. 
         // Memorization of the combination and the last node instead of the permutation.
         vector<vector<int>> dp(1<<n, vector<int>(n, INT_MAX));
         vector<vector<int>> parent(1<<n, vector<int>(n, -1));
+        // Initializtion dp;
         for (int i=0;i<n;i++) {
             dp[(1<<i)][i] = A[i].size();
         }
